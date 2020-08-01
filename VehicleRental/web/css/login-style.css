@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 12, 2019, 3:36:19 PM
+    Author     : Prasad Chathuranga
+*/
+
+
+.login-page-content {
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	/*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);*/
+	padding-bottom: 25px;
+	border-radius: 3px;
+        height: 100%;
+        
+}
+
+.login-form input{
+    background: transparent;
+}
+
+
+
+.login-form .align{
+    text-align: center;
+}
+
+.login-form {
+	background-color: white;
+	padding: 50px 20px 15px;
+        margin-top: 20px;
+}
+
+.login-form h3 {
+	color: #000;
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	
+
+}
+
+#lgoin-page-wrap{
+    height: 700px;
+}
+
+

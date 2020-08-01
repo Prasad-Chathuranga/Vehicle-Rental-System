@@ -1,0 +1,75 @@
+header-area,
+#header-area a {
+	color: #fff;
+}
+
+#header-top {
+	padding: 7px 0;
+        height: 5px;
+}
+
+#header-top i {
+	color: #ffd000;
+	font-size: 15px;
+	margin-right: 2px;
+}
+
+#header-area .header-social-icons a i.fa {
+	color: #fff;
+	font-size: 15px;
+	margin-left: 10px;
+	
+}
+/*
+#header-area .header-social-icons a:hover i.fa,
+#header-area .mainmenu ul li.active a,
+#header-area .mainmenu ul li:hover a {
+	color: #ffd000;
+}*/
+
+
+
+#header-area .col-lg-3{
+    color: #fff;
+}
+/* Navbar Style */
+
+.bs-example .navbar{
+    background-color: #1e2228;
+}
+
+.preloader{
+    height: 40px;
+}
+
+.preloader .preloader-spinner #txt{
+    font-size: 16px;
+    padding: 0px 0;
+    margin-left: 2px;
+}
+
+
+.card-columns {
+  column-count: 4!important;
+}
+
+
+
+.footer-bottom-area {
+	background-color: #1e2228; ;
+	color: #eaeaea;
+	padding: 15px 0;
+}
+
+/*== Footer Area CSS End ==*/
+
+.banner{
+    background-image: url('../images/bvb.jpg');
+    /*background-repeat: no-repeat;*/
+    
+}
+
+
+
+
+

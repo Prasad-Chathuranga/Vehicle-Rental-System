@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/index-style.css">
+        <title>Admin Portal</title>
+
+    </head>
+    <body onload="startTime()">
+
+        <!--- Clock Display ------> 
+        <script>
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML =
+                        h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i
+                }
+                ;  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+
+        <!------------------------------->
+
+        <div class="preloader bg-dark text-light" >
+            <div class="preloader-spinner" >
+
+
+                <div id="header-top" class="d-none d-xl-block">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="loader-content">
+                                <!--<img src="assets/img/preloader.gif">-->
+                                <p id="txt"></p>
+
+                            </div>
+
+                            <div class="col-lg-3 text-left ">
+                                <i class="fas fa-map-marker-alt"></i> &nbsp; 802/2 Malabe, Sri Lanka
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <div class="col-lg-3 text-center">
+                                <i class="fas fa-phone-volume"></i> +011 2 354 354
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <div class="col-lg-3 text-center">
+                                <i class="far fa-clock"></i> Mon-Fri 09.00 - 17.00
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                            <div class="header-social-icons text-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>&nbsp;
+                                <a href="#"><i class="fab fa-instagram"></i></a>&nbsp;
+                                <a href="#"><i class="fab fa-facebook"></i></a>&nbsp;
+                                <a href="#"><i class="fab fa-youtube"></i></a>&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bs-example">
+            <nav class="navbar navbar-expand-md navbar-light fixed">
+                <a href="#" class="navbar-brand">
+                    <!--                    <h5 class="text-warning text-right"> Eazy Drive</h5>
+                                        <img src="images/favicon.ico" width="40" >-->
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="" class="nav-item nav-link text-warning"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="" class="nav-item nav-link text-warning"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="" class="nav-item nav-link text-warning"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="" class="nav-item nav-link text-warning"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="" class="nav-item nav-link text-warning"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+
+        <section id="home-icons" class="py-5" style=" background-color: #252a2b;" >
+            <h1 class="text-center text-warning"><b>Admin Portal</b></h1><br>
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="card">
+                            <img src="images/pay.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Payment Portal</h5>
+                                <a href="payment_add_new_payment.jsp" <button type="button"  class="btn btn-block btn-success">Add Payment</button></a>
+                                <a href="payments_view_payments.jsp"<button type="button" class="btn  btn-block btn-primary">View Payment</button></a>
+                                <a href="payment_update_payments.jsp"<button type="button" class="btn  btn-block btn-secondary">Update Payment</button></a>
+                                <a href="payment_delete_payment.jsp"<button type="button" class="btn btn-block btn-danger">Delete Payment</button></a><br>
+
+                                <form name="report"  action="/VehicleRental/paymentReport">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-outline-dark  btn-block" type="submit" name="btnver"> Payment Details Report </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4 mb-4 text-center">
+
+                        <div class="card">
+                            <img src="images/ord.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> Order Details Portal</h5>
+
+                                <a href="order_view_orders.jsp" <button type="button" class="btn  btn-block btn-primary">View Orders</button></a>
+                                <a href="order_update_orders.jsp" <button type="button" class="btn  btn-block btn-secondary">Update Orders</button></a>
+                                <a href="order_delete_orders.jsp"<button type="button" class="btn  btn-block btn-danger">Delete Orders</button></a><br>
+
+                                <form name="report" action="/VehicleRental/orderReport">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-outline-dark  btn-block" type="submit" name="btnver"> Order Details Report </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="card">
+                            <img src="images/user.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> User Details Portal</h5>
+
+                                <a href="customer_view_customers.jsp" <button type="button" class="btn  btn-block btn-primary">View Users</button></a>
+                                <a href="customer_delete_customer.jsp"<button type="button" class="btn  btn-block btn-danger">Delete Users</button></a><br>
+
+                                <form name="report" method="get" action="/VehicleRental/userDetails">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-outline-dark  btn-block" type="submit" name="btnver"> User Details Report </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="card">
+                            <img src="images/veh.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Vehicles Portal</h5>
+                                <a href="vehicle_add_vehicle.jsp"<button type="button" class="btn btn-block btn-success">Add Vehicle</button>
+                                    <a href="vehicle_view_vehicles.jsp" <button type="button" class="btn  btn-block btn-primary">View Vehicles</button></a>
+                                    <a href="vehicle_update_vehicles.jsp"<button type="button" class="btn  btn-block btn-secondary">Update Vehicles</button></a>
+                                    <a href="vehicle_delete_vehicles.jsp"<button type="button" class="btn btn-block btn-danger">Delete Vehicle</button></a> <br>
+
+                                    <form name="report" method="get" action="/VehicleRental/vehicleRe">
+
+                                        <button class="btn btn-outline-dark  btn-block" type="submit" name="btnver"> Vehicle Details Report </button>
+
+
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+
+
+
+
+
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved | Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

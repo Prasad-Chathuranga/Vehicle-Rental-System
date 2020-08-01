@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/index-style.css">
+        <title>Homepage</title>
+
+    </head>
+    <body onload="startTime()">
+
+        <!--- Clock Display ------> 
+        <script>
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML =
+                        h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i
+                }
+                ;  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+
+        <!------------------------------->
+
+        <div class="preloader bg-dark text-light" >
+            <div class="preloader-spinner" >
+
+
+                <div id="header-top" class="d-none d-xl-block">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="loader-content">
+                                <!--<img src="assets/img/preloader.gif">-->
+                                <p id="txt"></p>
+
+                            </div>
+
+                            <div class="col-lg-3 text-left ">
+                                <i class="fas fa-map-marker-alt"></i> &nbsp; 802/2 Malabe, Sri Lanka
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <div class="col-lg-3 text-center">
+                                <i class="fas fa-phone-volume"></i> +011 2 354 354
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <div class="col-lg-3 text-center">
+                                <i class="far fa-clock"></i> Mon-Fri 09.00 - 17.00
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                            <div class="header-social-icons text-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>&nbsp;
+                                <a href="#"><i class="fab fa-instagram"></i></a>&nbsp;
+                                <a href="#"><i class="fab fa-facebook"></i></a>&nbsp;
+                                <a href="#"><i class="fab fa-youtube"></i></a>&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bs-example">
+            <nav class="navbar navbar-expand-md navbar-light fixed">
+                <a href="#" class="navbar-brand">
+                    <!--                    <h5 class="text-warning text-right"> Eazy Drive</h5>
+                                        <img src="images/favicon.ico" width="40" >-->
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="index.html" class="nav-item nav-link text-warning">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="vehicle_details.jsp" class="nav-item nav-link text-warning">AVAILABLE VEHICLES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="aboutus.html" class="nav-item nav-link text-warning">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="contactus.html" class="nav-item nav-link text-warning">CONTACT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" onclick="myFunction()" class="nav-item nav-link text-warning">BOOK A CAR </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <a href="customer_login.jsp" class="nav-item nav-link"><button class="btn btn-outline-warning">Login</button></a>
+                        <a href="customer_register.jsp" class="nav-item nav-link"><button class="btn btn-outline-warning">Sign Up</button></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <section id="slider-area" class="banner" style="margin-top: -45px;">
+            <!--== slide Item One ==-->
+            <div class="single-slide-item overlay">
+                <div class="container mt-5" >
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!--<div class="border-class">-->
+
+                            <form class="mt-2" >
+
+                                <div class="form-group">
+                                    <div class="col-md-5">
+                                        <hr> <h4 class="text-left"><b>&nbsp;&nbsp; BOOK A CAR TODAY ! </b></h4><hr>
+                                        <label for="date" ><b>Pickup Date</b></label>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                        <input style="background:transparent;" type="date" class="form-control"  name="date">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-5">
+                                        <label for="date" ><b>Return Date</b></label>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                        <input style="background:transparent;"  type="date" class="form-control" name="date">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-5 control-label"><b>Vehicle Model</b></label>
+                                    <div class="col-md-5">
+                                        <select  class="form-control" name="model">
+                                            <option>Suzuki</option>
+                                            <option>Toyota</option>
+                                            <option>Mitsubishi</option>
+                                            <option>Tata</option>
+                                        </select>
+                                    </div>
+                                </div> 
+
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-5 control-label"><b>Sub Model</b></label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control" name="submodel">
+                                            <option>Suzuki Alto</option>
+                                            <option>Suzuki Wagon R</option>
+                                            <option>Toyota Hybrid Aqua</option>
+                                            <option>Toyota Hybrid CHR</option>
+                                            <option>Mitsubishi Lancer</option>
+                                            <option>Tata Nano</option>
+                                        </select>
+                                    </div>
+                                </div>  
+
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-5 control-label"><b>Vehicle Color</b></label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control" name="color">
+                                            <option>White</option>
+                                            <option>Black</option>
+                                            <option>Blue</option>
+                                            <option>Gray</option>
+                                            <option>Green</option>
+                                            <option>Red</option>
+                                        </select>
+                                    </div>
+                                </div> 
+
+                                <div class="form-group">
+                                    <div class="col-sm-5">
+                                        <script>
+                                            function myFunction() {
+                                                alert("Access Denied ! You've to Login First !!");
+                                            }
+                                        </script>
+                                        <a style="text-decoration: none;"><button onclick="myFunction()" type="button" class="btn btn-block btn-warning"><b>Book Now</b></button></a>
+                                        <!--<hr class="bg-light">-->
+                                    </div>
+
+                                </div>
+                                <!--</div>-->
+                            </form>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </section>
+
+        <section id="home-icons" class="py-5" style=" background-color: #252a2b;" >
+            <h2 class="text-center text-warning">Solutions We Offer <i class="fas fa-long-arrow-alt-down  mb-2"></i></h2><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="card">
+                            <img src="images/1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body"  style="background:#ffc91c;">
+                                <h5 class="card-title">Self Drive Rental</h5>
+                                <p class="card-text">A wide range of self drive cars in Sri Lanka from economical to luxury on daily, weekly terms.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="card">
+                            <img src="images/2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body"  style="background:#ffc91c;">
+                                <h5 class="card-title">Tours / Chauffeur Driven</h5>
+                                <p class="card-text">A unique range of chauffeur driven cars that exceedingly surpass the norm on daily, weekly terms. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="card">
+                            <img src="images/3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body"  style="background:#ffc91c;">
+                                <h5 class="card-title">Airport / City Transfers</h5>
+                                <p class="card-text">We offer city and airport transfers in Sri Lanka from the Colombo International Airport to any location in the island. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="card">
+                            <img src="images/4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body" style="background:#ffc91c;">
+                                <h5 class="card-title">Weddings / Events</h5>
+                                <p class="card-text">A fleet of luxury wedding cars in Sri Lanka, we are well geared for weddings and special occasions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="card">
+                            <img src="images/5.jpg" class="card-img-top" alt="...">
+                            <div class="card-body"  style="background:#ffc91c;">
+                                <h5 class="card-title">Optional Equipment</h5>
+                                <p class="card-text">We offer a wide range of optional equipment for those searching for a rent a car service in Sri Lanka.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4 text-center">
+                        <div class="card">
+                            <img src="images/6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body"  style="background:#ffc91c;">
+                                <h5 class="card-title">Road Side Assistance</h5>
+                                <p class="card-text">We offer 24/7/365 roadside assistance islandwide with a team ready for action &nbsp; &nbsp; &nbsp;&nbsp;[ 1st time in Sri Lanka ]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer Bottom Start -->
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved | Sri Lanka</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/index-style.css">
+        <title>Homepage</title>
+
+    </head>
+    <body onload="startTime()">
+
+        <!--- Clock Display ------> 
+        <script>
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML =
+                        h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i
+                }
+                ;  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+
+        <!------------------------------->
+
+        <div class="preloader bg-dark text-light" >
+            <div class="preloader-spinner" >
+
+
+                <div id="header-top" class="d-none d-xl-block">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="loader-content">
+                                <!--<img src="assets/img/preloader.gif">-->
+                                <p id="txt"></p>
+
+                            </div>
+
+                            <div class="col-lg-3 text-left ">
+                                <i class="fas fa-map-marker-alt"></i> &nbsp; 802/2 Malabe, Sri Lanka
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <div class="col-lg-3 text-center">
+                                <i class="fas fa-phone-volume"></i> +011 2 354 354
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <div class="col-lg-3 text-center">
+                                <i class="far fa-clock"></i> Mon-Fri 09.00 - 17.00
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                            <div class="header-social-icons text-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>&nbsp;
+                                <a href="#"><i class="fab fa-instagram"></i></a>&nbsp;
+                                <a href="#"><i class="fab fa-facebook"></i></a>&nbsp;
+                                <a href="#"><i class="fab fa-youtube"></i></a>&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bs-example">
+            <nav class="navbar navbar-expand-md navbar-light fixed">
+                <a href="#" class="navbar-brand">
+                    <!--                    <h5 class="text-warning text-right"> Eazy Drive</h5>
+                                        <img src="images/favicon.ico" width="40" >-->
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        
+                        <a href="index.html" class="nav-item nav-link text-warning">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="vehicle_details.jsp" class="nav-item nav-link text-warning">AVAILABLE VEHICLES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="aboutus.html" class="nav-item nav-link text-warning">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="contactus.html" class="nav-item nav-link text-warning">CONTACT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" onclick="myFunction()" class="nav-item nav-link text-warning">BOOK A CAR </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <a href="customer_login.jsp" class="nav-item nav-link"><button class="btn btn-outline-warning">Login</button></a>
+                        <a href="customer_register.jsp" class="nav-item nav-link"><button class="btn btn-outline-warning">Sign Up</button></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <section id="slider-area" class="banner" style="margin-top: -45px;">
+            <!--== slide Item One ==-->
+            <div class="single-slide-item overlay">
+                <div class="container mt-5" >
+                    <div class="row">
+                        <div class="col-md-8">
+                            <!--<div class="border-class">-->
+
+                            <form class="mt-2" >
+
+                                <div class="form-group">
+                                    <div class="col-md-5">
+                                        <hr> <h4 class="text-left"><b>&nbsp;&nbsp; BOOK A CAR TODAY ! </b></h4><hr>
+                                        <label for="date" ><b>Pickup Date</b></label>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                        <input style="background:transparent;" type="date" class="form-control"  name="date">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-5">
+                                        <label for="date" ><b>Return Date</b></label>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                        <input style="background:transparent;"  type="date" class="form-control" name="date">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-5 control-label"><b>Vehicle Model</b></label>
+                                    <div class="col-md-5">
+                                        <select  class="form-control" name="model">
+                                            <option>Suzuki</option>
+                                            <option>Toyota</option>
+                                            <option>Mitsubishi</option>
+                                            <option>Tata</option>
+                                        </select>
+                                    </div>
+                                </div> 
+
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-5 control-label"><b>Sub Model</b></label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control" name="submodel">
+                                            <option>Suzuki Alto</option>
+                                            <option>Suzuki Wagon R</option>
+                                            <option>Toyota Hybrid Aqua</option>
+                                            <option>Toyota Hybrid CHR</option>
+                                            <option>Mitsubishi Lancer</option>
+                                            <option>Tata Nano</option>
+                                        </select>
+                                    </div>
+                                </div>  
+
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-5 control-label"><b>Vehicle Color</b></label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control" name="color">
+                                            <option>White</option>
+                                            <option>Black</option>
+                                            <option>Blue</option>
+                                            <option>Gray</option>
+                                            <option>Green</option>
+                                            <option>Red</option>
+                                        </select>
+                                    </div>
+                                </div> 
+
+                                <div class="form-group">
+                                    <div class="col-sm-5">
+                                        <script>
+                                            function myFunction() {
+                                                alert("Access Denied ! You've to Login First !!");
+                                            }
+                                        </script>
+                                        <a style="text-decoration: none;"><button onclick="myFunction()" type="button" class="btn btn-block btn-warning"><b>Book Now</b></button></a>
+                                        <!--<hr class="bg-light">-->
+                                    </div>
+
+                                </div>
+                                <!--</div>-->
+                            </form>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </section>
+
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Page Heading/Breadcrumbs -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <h1 class="page-header text-dark">Contact
+
+                        <small>Eazy Drive | Sri Lanka</small>
+                    </h1>
+                    <br>
+
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <!-- Content Row -->
+            <div class="row">
+                <!-- Map Column -->
+                <div class="col-md-8">
+                    <!-- Embedded Google Map -->
+                    <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://www.google.com/maps/d/u/0/embed?mid=1CuplzZeslv7hkvCMwYQxkfcNiEQ&msa=0&hl=en&ie=UTF8&t=m&ll=6.903954000000014%2C79.95592099999999&spn=0.006497%2C0.019526&z=16&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net"></a></div><style>.mapouter{text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+                </div>
+                <!-- Contact Details Column -->
+                <div class="col-md-4">
+                    <h3>Contact Details</h3>
+                    <p>We are always ready to serve you the best we can. Please leave a message, call our number or email us regarding any of our services inquiries.</p>
+                    <p><i class="fas fa-map-marker-alt"></i>
+                        <abbr title="Phone"></abbr>     : 802/2 Malabe, Sri Lanka </p>
+                    </p>
+                    <p><i class="fa fa-phone"></i> 
+                        <abbr title="Phone"></abbr>: +011 2 354 354 </p>
+                    <p><i class="fa fa-envelope"></i> 
+                        <abbr title="Email"></abbr>: <a class="text-black" href="kandyshoepalace@gmail.com">eazydrive@gmail.com</a>
+                    </p>
+                    <p><i class="fa fa-clock"></i> 
+                        <abbr title="Hours"></abbr>: Mon-Fri 09.00 - 17.00 </p>
+                    <ul class="list-unstyled list-inline list-social-icons">
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f fa-2x bg-black"></i><span class="text-dark"></a> : Eazy Drive | Sri Lanka  </span>
+                        </li>
+                        <br>
+                        <li>
+                            <a href="#" class="btn btn-success " ><span data-toggle="modal"
+                                                                        data-target="#WebDev">Stay Connected With Us !</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+            <!-- /.row -->
+
+
+
+
+
+
+
+
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved | Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+

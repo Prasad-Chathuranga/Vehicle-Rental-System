@@ -1,0 +1,21 @@
+
+.leftside .rightside{
+    height: 100vh;
+    width: 100%;
+ 
+}
+
+.rightside{
+    padding-top: 0px;
+    margin-top: -400px;
+    margin-left: 300px;
+}
+
+#table{
+    width: 600px;
+}
+
+#table-view{
+    width: 1000px;
+}
+
